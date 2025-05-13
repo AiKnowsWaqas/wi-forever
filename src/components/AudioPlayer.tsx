@@ -10,35 +10,53 @@ const AudioPlayer: React.FC = () => {
     // Create audio element
     audioRef.current = new Audio('https://docs.google.com/uc?export=download&id=1-2xZn6daQGUKgdv8Hn9ZHMCbQB9ES_vr');
     audioRef.current.loop = true;
+    audioRef.current.preload = 'auto';
 
-    // Attempt autoplay if browser permits
-    const playPromise = audioRef.current.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          setIsPlaying(true);
-        })
-        .catch(() => {
-          setIsPlaying(false);
-        });
-    }
+    // Add event listeners
+    const audio = audioRef.current;
+    audio.addEventListener('canplaythrough', handleCanPlayThrough);
+    audio.addEventListener('play', () => setIsPlaying(true));
+    audio.addEventListener('pause', () => setIsPlaying(false));
 
+    // Cleanup
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
+      if (audio) {
+        audio.removeEventListener('canplaythrough', handleCanPlayThrough);
+        audio.pause();
+        audio.src = '';
       }
     };
   }, []);
+
+  const handleCanPlayThrough = () => {
+    if (audioRef.current) {
+      // Attempt autoplay
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((error) => {
+            console.log('Autoplay prevented:', error);
+            setIsPlaying(false);
+          });
+      }
+    }
+  };
 
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((error) => {
+            console.log('Playback prevented:', error);
+          });
+        }
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
