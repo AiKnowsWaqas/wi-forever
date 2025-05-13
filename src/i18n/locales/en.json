@@ -1,0 +1,59 @@
+{
+  "header": {
+    "bismillah": "In the name of Allah, the Most Gracious, the Most Merciful",
+    "invitation": "We joyfully invite you to celebrate our",
+    "ceremony": "Nikkah",
+    "waqas": "Mohammed Waqas",
+    "son": "Son of Janab Natamkar Saifullah",
+    "ifrah": "Ifrah Maheen",
+    "daughter": "Daughter of Janab Saud",
+    "quranVerse": "And among His Signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are Signs for those who reflect.",
+    "surah": "Surah Ar-Rum 30:21"
+  },
+  "countdown": {
+    "title": "Join Us On Our Special Day",
+    "months": "Months",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "message": "We look forward to celebrating this blessed occasion with you.",
+    "weddingDay": "Today is our Wedding Day!",
+    "blessingMessage": "Please keep us in your prayers",
+    "counter": "Our Forever Begins In..."
+  },
+  "events": {
+    "title": "Event Details",
+    "subtitle": "We're delighted to invite you to join us for these special moments.",
+    "nikkah": {
+      "title": "Nikkah Venue",
+      "location": "Choti Masjid, Ambur",
+      "time": "11:00 AM",
+      "description": "The sacred Nikkah ceremony will be held at Choti Masjid at Ambur. Please arrive on time for this blessed event."
+    },
+    "reception": {
+      "title": "Wedding Reception/Lunch",
+      "location": "Buwa Shadi Mahal, Ambur",
+      "time": "After Zuhar Namaz",
+      "description": "Join us for lunch and celebration following Zuhar Namaz. We look forward to sharing this joyous occasion with you."
+    },
+    "getDirections": "Get Directions"
+  },
+  "calendar": {
+    "title": "Save The Date",
+    "subtitle": "Add our wedding to your calendar so you don't miss our special day.",
+    "google": "Google Calendar",
+    "outlook": "Outlook",
+    "apple": "Apple Calendar"
+  },
+  "share": {
+    "title": "Share Our Joy",
+    "subtitle": "Spread the word by sharing our invitation with family and friends.",
+    "via": "Share via",
+    "copied": "Link copied to clipboard!"
+  },
+  "footer": {
+    "dua": "Please keep us in your precious duas as we begin this new chapter of life together.",
+    "contact": "-  Waqas & Ifrah "
+  }
+}
