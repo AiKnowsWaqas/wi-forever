@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
-import { motionKinnon } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const AudioPlayer: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(true); // Default to true for intended autoplay
+  const [isPlaying, setIsPlaying] = useState(true); // Changed to true for default play
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -12,53 +12,51 @@ const AudioPlayer: React.FC = () => {
     audioRef.current.loop = true;
     audioRef.current.preload = 'auto';
 
+    // Add event listeners
     const audio = audioRef.current;
-
-    // Event listeners
+    audio.addEventListener('canplaythrough', handleCanPlayThrough);
     audio.addEventListener('play', () => setIsPlaying(true));
     audio.addEventListener('pause', () => setIsPlaying(false));
-    audio.addEventListener('loadedmetadata', () => {
-      // Attempt to play as soon as metadata is loaded
-      const playPromise = audio.play();
+
+    // Attempt autoplay immediately
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch((error) => {
+          console.log('Autoplay prevented:', error);
+          setIsPlaying(false);
+        });
+    }
+
+    // Cleanup
+    return () => {
+      if (audio) {
+        audio.removeEventListener('canplaythrough', handleCanPlayThrough);
+        audio.pause();
+        audio.src = '';
+      }
+    };
+  }, []);
+
+  const handleCanPlayThrough = () => {
+    if (audioRef.current && !isPlaying) {
+      // Only play if not already playing
+      const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
             setIsPlaying(true);
           })
           .catch((error) => {
-            console.log('Autoplay failed:', error);
+            console.log('Playback prevented:', error);
             setIsPlaying(false);
-            // Fallback: Attempt to play on first user interaction
-            const tryPlayOnInteraction = () => {
-              const playPromise = audio.play();
-              if (playPromise !== undefined) {
-                playPromise
-                  .then(() => {
-                    setIsPlaying(true);
-                    // Remove listeners after successful play
-                    window.removeEventListener('click', tryPlayOnInteraction);
-                    window.removeEventListener('touchstart', tryPlayOnInteraction);
-                  })
-                  .catch((err) => console.log('Interaction play failed:', err));
-              }
-            };
-            window.addEventListener('click', tryPlayOnInteraction);
-            window.addEventListener('touchstart', tryPlayOnInteraction);
           });
       }
-    });
-
-    // Cleanup
-    return () => {
-      if (audio) {
-        audio.removeEventListener('play', () => setIsPlaying(true));
-        audio.removeEventListener('pause', () => setIsPlaying(false));
-        audio.removeEventListener('loadedmetadata', () => {});
-        audio.pause();
-        audio.src = '';
-      }
-    };
-  }, []);
+    }
+  };
 
   const togglePlay = () => {
     if (audioRef.current) {
