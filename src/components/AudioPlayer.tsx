@@ -3,7 +3,7 @@ import { Volume2, VolumeX } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const AudioPlayer: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Changed to true for default play
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -18,6 +18,19 @@ const AudioPlayer: React.FC = () => {
     audio.addEventListener('play', () => setIsPlaying(true));
     audio.addEventListener('pause', () => setIsPlaying(false));
 
+    // Attempt autoplay immediately
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch((error) => {
+          console.log('Autoplay prevented:', error);
+          setIsPlaying(false);
+        });
+    }
+
     // Cleanup
     return () => {
       if (audio) {
@@ -29,8 +42,8 @@ const AudioPlayer: React.FC = () => {
   }, []);
 
   const handleCanPlayThrough = () => {
-    if (audioRef.current) {
-      // Attempt autoplay
+    if (audioRef.current && !isPlaying) {
+      // Only play if not already playing
       const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise
@@ -38,7 +51,7 @@ const AudioPlayer: React.FC = () => {
             setIsPlaying(true);
           })
           .catch((error) => {
-            console.log('Autoplay prevented:', error);
+            console.log('Playback prevented:', error);
             setIsPlaying(false);
           });
       }
