@@ -6,6 +6,7 @@ import CalendarIntegration from './components/CalendarIntegration';
 import ShareSection from './components/ShareSection';
 import Footer from './components/Footer';
 import LanguageSelector from './components/LanguageSelector';
+import AudioPlayer from './components/AudioPlayer';
 import { motion } from 'framer-motion';
 import './i18n';
 
@@ -13,6 +14,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen pattern-bg overflow-hidden">
       <LanguageSelector />
+      <AudioPlayer />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
