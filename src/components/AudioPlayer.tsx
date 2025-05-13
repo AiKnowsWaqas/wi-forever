@@ -8,7 +8,7 @@ const AudioPlayer: React.FC = () => {
 
   useEffect(() => {
     // Create audio element
-    audioRef.current = new Audio('https://docs.google.com/uc?export=download&id=1-2xZn6daQGUKgdv8Hn9ZHMCbQB9ES_vr');
+    audioRef.current = new Audio('/bg.mp3');
     audioRef.current.loop = true;
     audioRef.current.preload = 'auto';
 
