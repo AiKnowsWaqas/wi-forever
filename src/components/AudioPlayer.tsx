@@ -3,22 +3,19 @@ import { Volume2, VolumeX } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const AudioPlayer: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(true); // Changed to true for default play
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Create audio element
     audioRef.current = new Audio('/bg.mp3');
     audioRef.current.loop = true;
     audioRef.current.preload = 'auto';
 
-    // Add event listeners
     const audio = audioRef.current;
     audio.addEventListener('canplaythrough', handleCanPlayThrough);
     audio.addEventListener('play', () => setIsPlaying(true));
     audio.addEventListener('pause', () => setIsPlaying(false));
 
-    // Attempt autoplay immediately
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise
@@ -31,7 +28,6 @@ const AudioPlayer: React.FC = () => {
         });
     }
 
-    // Cleanup
     return () => {
       if (audio) {
         audio.removeEventListener('canplaythrough', handleCanPlayThrough);
@@ -43,7 +39,6 @@ const AudioPlayer: React.FC = () => {
 
   const handleCanPlayThrough = () => {
     if (audioRef.current && !isPlaying) {
-      // Only play if not already playing
       const playPromise = audioRef.current.play();
       if (playPromise !== undefined) {
         playPromise
@@ -74,7 +69,7 @@ const AudioPlayer: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-4 right-20 z-50">
+    <div className="fixed top-4 right-4 md:right-20 z-50">
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
