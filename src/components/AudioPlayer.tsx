@@ -69,7 +69,7 @@ const AudioPlayer: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-4 right-4 md:right-20 z-50">
+    <div className="fixed top-4 right-3 md:right-20 z-50">
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
