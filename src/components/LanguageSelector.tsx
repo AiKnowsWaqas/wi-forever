@@ -13,7 +13,7 @@ const LanguageSelector: React.FC = () => {
   ];
 
   return (
-    <div className="fixed top-20 md:top-4 left-4 z-50">
+    <div className="fixed top-16 md:top-4 left-4 z-50">
       <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-md border border-gold-light p-2">
         <div className="flex gap-2">
           {languages.map((lang) => (
