@@ -25,7 +25,7 @@ export const eventDetails: EventDetail[] = [
 export const calendarEvent: CalendarEvent = {
   title: 'Waqas Wedding',
   description: 'We joyfully invite you to celebrate our Nikkah ceremony followed by lunch reception.',
-  location: 'Choti Masjid, Ambur\nCoordinates: 12.79018478956099, 78.71285471969199\nGoogle Maps: https://maps.app.goo.gl/Muovisx2WGBU1cwU9',
+  location: '12.79018478956099, 78.71285471969199',
   startDate: formatCalendarDate(weddingDate),
   endDate: formatCalendarDate(new Date(weddingDate.getTime() + 5 * 60 * 60 * 1000)),
 };
