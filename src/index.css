@@ -8,30 +8,49 @@
   }
   
   body {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Gilda Display', serif;
     @apply bg-white text-gray-800;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Gilda Display', serif;
   }
 
   .arabic-text {
     font-family: 'Amiri', serif;
     direction: rtl;
+    @apply leading-relaxed;
+  }
+  
+  .urdu-text {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    @apply leading-relaxed;
+  }
+
+  .hindi-text {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    @apply leading-relaxed;
+  }
+
+  .tamil-text {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    @apply leading-relaxed;
+  }
+
+  .kannada-text {
+    font-family: 'Noto Sans Kannada', sans-serif;
+    @apply leading-relaxed;
   }
   
   .bismillah {
     font-family: 'Amiri', serif;
+    @apply text-5xl md:text-6xl lg:text-7xl leading-relaxed;
   }
   
   .pattern-bg {
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6c88f' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  
-  .border-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e6c88f' fill-opacity='0.4'%3E%3Cpath d='M0 0h20L0 20z'/%3E%3C/g%3E%3C/svg%3E");
   }
   
   .section {

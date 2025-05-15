@@ -69,12 +69,12 @@ const AudioPlayer: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-4 right-3 md:right-20 z-50">
+    <div className="fixed top-4 right-4 md:right-20 z-50">
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={togglePlay}
-        className="bg-white rounded-lg shadow-md border border-gold-light p-2 hover:bg-emerald/10 transition-colors"
+        className="bg-white/90 backdrop-blur-sm rounded-lg shadow-md border border-gold-light p-2.5 hover:bg-emerald/10 transition-colors"
         aria-label={isPlaying ? 'Pause music' : 'Play music'}
       >
         {isPlaying ? (
@@ -86,5 +86,3 @@ const AudioPlayer: React.FC = () => {
     </div>
   );
 };
-
-export default AudioPlayer;
