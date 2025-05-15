@@ -5,7 +5,7 @@ export const eventDetails: EventDetail[] = [
   {
     id: 'nikkah',
     title: 'Nikkah Venue',
-    time: '11:00 AM',
+    time: '11:00 AM IST',
     location: 'Choti Masjid, Ambur',
     description: 'The sacred Nikkah ceremony will be held at Choti Masjid at Ambur. Please arrive on time for this blessed event.',
     mapUrl: 'https://maps.app.goo.gl/W1PpakDfrdbADnxe9',
