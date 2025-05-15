@@ -31,6 +31,6 @@ export const calendarEvent: CalendarEvent = {
 };
 
 export const shareMessage = `السلام عليكم ✨
-You're invited to Waqas's Nikkah
-Aug 16, 2025 | 11 AM @ Ambur
-JazakAllah`;
+You're invited to our Nikkah
+JazakAllah
+`;
