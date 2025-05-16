@@ -30,8 +30,9 @@ export const calendarEvent: CalendarEvent = {
   endDate: formatCalendarDate(new Date(weddingDate.getTime() + 5 * 60 * 60 * 1000)),
 };
 
-export const shareMessage = `السلام عليكم ✨
-With joy in our hearts, we invite you to celebrate our wedding..
+export const shareMessage = `السلام عليكم ورحمة الله وبركاته.....
 
-We've crafted this invitation with love, especially for you.
+With joy in our hearts, we invite you to celebrate our wedding. Your presence would make our celebration complete.
+
+We've crafted this invitation with love, especially for you....
 `;
