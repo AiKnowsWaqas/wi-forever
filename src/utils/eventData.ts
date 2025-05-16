@@ -31,6 +31,7 @@ export const calendarEvent: CalendarEvent = {
 };
 
 export const shareMessage = `السلام عليكم ✨
-✨ With joy in our hearts, we invite you to celebrate our wedding ✨
-See our wedding details here:
+With joy in our hearts, we invite you to celebrate our wedding..
+
+We've crafted this invitation with love, especially for you.
 `;
