@@ -32,5 +32,5 @@ export const calendarEvent: CalendarEvent = {
 
 export const shareMessage = `السلام عليكم ✨
 ✨ With joy in our hearts, we invite you to celebrate our wedding ✨
-JazakAllah
+See our wedding details here:
 `;
