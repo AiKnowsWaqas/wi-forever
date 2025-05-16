@@ -31,6 +31,6 @@ export const calendarEvent: CalendarEvent = {
 };
 
 export const shareMessage = `السلام عليكم ✨
-You're invited to our Nikkah
+✨ With joy in our hearts, we invite you to celebrate our wedding ✨
 JazakAllah
 `;
