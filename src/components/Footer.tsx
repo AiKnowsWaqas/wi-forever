@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
       <div className="bg-emerald text-white py-4">
         <div className="container mx-auto px-4 text-center text-sm">
        
-          Made with ❤️ (and coffee!☕)) by Waqas |{" "}
+          Made with ❤️ (and coffee!☕) by Waqas |{" "}
     <a
       href="https://nsmdwaqas-ai.netlify.app/"
       target="_blank"
