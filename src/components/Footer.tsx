@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
       rel="noopener noreferrer"
       className="underline hover:text-gray-200"
     >
-      Curious about the groom's day job? Click here!
+      Curious about Groom? Click here!
     </a>
     <br />
           
