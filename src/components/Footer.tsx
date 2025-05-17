@@ -46,6 +46,18 @@ const Footer: React.FC = () => {
       
       <div className="bg-emerald text-white py-4">
         <div className="container mx-auto px-4 text-center text-sm">
+       
+          Made with ❤️ (and coffee!) by Waqas |{" "}
+    <a
+      href="https://example.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline hover:text-gray-200"
+    >
+      Curious about the groom's day job? Click here!
+    </a>
+    <br />
+          
           © {new Date().getFullYear()} Waqas's Wedding
         </div>
       </div>
