@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
        
           Made with ❤️ (and coffee!) by Waqas |{" "}
     <a
-      href="https://example.com"
+      href="https://nsmdwaqas-ai.netlify.app/"
       target="_blank"
       rel="noopener noreferrer"
       className="underline hover:text-gray-200"
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
     </a>
     <br />
           
-          © {new Date().getFullYear()} Waqas's Wedding
+          © {new Date().getFullYear()} Waqas & Ifrah - Our Forever Adventure Begins! Inshallah... 
         </div>
       </div>
     </footer>
