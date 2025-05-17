@@ -14,7 +14,7 @@ export const eventDetails: EventDetail[] = [
   {
     id: 'reception',
     title: 'Wedding Reception/Lunch',
-    time: 'After Zuhar Namaz',
+    time: 'After Zuhar Namaz , 1:00 PM',
     location: 'Buwa Shadi Mahal, Ambur',
     description: 'Join us for lunch and celebration following Zuhar Namaz. We look forward to sharing this joyous occasion with you.',
     mapUrl: 'https://maps.app.goo.gl/JApc9jmEkxZdKNiS8',
