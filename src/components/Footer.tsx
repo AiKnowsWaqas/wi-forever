@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
     </a>
     <br />
           
-          © Made with ❤️ (and coffee!☕) by Waqas & Ifrah.. 
+          © Made with ❤️ by Waqas & Ifrah.. 
         </div>
       </div>
     </footer>
