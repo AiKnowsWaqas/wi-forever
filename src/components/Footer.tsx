@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
       rel="noopener noreferrer"
       className="text-gray-200"
     >
-      © Made with ❤️ by Waqas | Click to know more.. 
+      © Made with ❤️ (and some tea ☕) by Waqas.... 
     </a>
     
       
