@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
       href="https://nsmdwaqas-ai.netlify.app/"
       target="_blank"
       rel="noopener noreferrer"
-      className="underline hover:text-gray-200"
+      className="text-gray-200"
     >
       © Made with ❤️ and  ( some tea !) by Waqas.. 
     </a>
