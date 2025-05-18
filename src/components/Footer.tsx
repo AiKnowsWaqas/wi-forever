@@ -54,11 +54,11 @@ const Footer: React.FC = () => {
       rel="noopener noreferrer"
       className="underline hover:text-gray-200"
     >
-      Curious about Waqas? Click here!
+      © Made with ❤️ and  ( some tea !) by Waqas.. 
     </a>
-    <br />
+    
+      
           
-          © Made with ❤️ by Waqas & Ifrah.. 
         </div>
       </div>
     </footer>
