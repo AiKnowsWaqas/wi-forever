@@ -32,7 +32,7 @@ export const calendarEvent: CalendarEvent = {
 
 export const shareMessage = `السلام عليكم.... ✨
 
-With heartfelt joy, we invite you to our wedding—your presence will complete our celebration.🌸💍 
+With heartfelt joy, we invite you to Natamkar family wedding—your presence will complete our celebration.🌸💍 
 
-❤️ We've crafted this invitation with love, especially for you....
+❤️ We've crafted this invitation especially for you....
 `;
