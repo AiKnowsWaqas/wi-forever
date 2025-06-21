@@ -1,6 +1,6 @@
 import { formatDistance, intervalToDuration, format } from 'date-fns';
 
-export const weddingDate = new Date('August 16, 2025 11:00:00 GMT+0530');
+export const weddingDate = new Date('August 16, 2025 11:45:00 GMT+0530');
 
 export const formatEventDate = (date: Date): string => {
   return format(date, 'EEEE, MMMM do, yyyy');
