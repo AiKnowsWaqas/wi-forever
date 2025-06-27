@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
        
          
     <a
-      href="https://nsmdwaqas-ai.netlify.app/"
+      href="https://tinyurl.com/nsmdwaqas"
       target="_blank"
       rel="noopener noreferrer"
       className="text-gray-200"
