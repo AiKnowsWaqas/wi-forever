@@ -8,8 +8,7 @@ const LanguageSelector: React.FC = () => {
   const languages = [
     { code: 'en', name: 'English' },
     { code: 'ur', name: 'اردو' },
-    { code: 'ta', name: 'தமிழ்' },
-    { code: 'ka', name: 'ಕನ್ನಡ' }
+    { code: 'ta', name: 'தமிழ்' }
   ];
 
   return (
@@ -27,8 +26,7 @@ const LanguageSelector: React.FC = () => {
                   : 'text-gray-700 hover:bg-emerald/10'
               } ${
                 lang.code === 'ur' ? 'urdu-text' :
-                lang.code === 'ta' ? 'tamil-text' :
-                lang.code === 'ka' ? 'kannada-text' : ''
+                lang.code === 'ta' ? 'tamil-text' : ''
               }`}
               onClick={() => i18n.changeLanguage(lang.code)}
             >
@@ -41,4 +39,4 @@ const LanguageSelector: React.FC = () => {
   );
 };
 
-export default LanguageSelector
+export default LanguageSelector;

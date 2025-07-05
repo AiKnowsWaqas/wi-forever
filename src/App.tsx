@@ -2,9 +2,8 @@ import React from 'react';
 import Header from './components/Header';
 import CountdownTimer from './components/CountdownTimer';
 import EventDetails from './components/EventDetails';
-import CalendarIntegration from './components/CalendarIntegration';
 import GuestBook from './components/GuestBook';
-import ShareSection from './components/ShareSection';
+import FloatingActions from './components/FloatingActions';
 import Footer from './components/Footer';
 import LanguageSelector from './components/LanguageSelector';
 import AudioPlayer from './components/AudioPlayer';
@@ -16,6 +15,7 @@ const App: React.FC = () => {
     <div className="min-h-screen pattern-bg overflow-hidden">
       <LanguageSelector />
       <AudioPlayer />
+      <FloatingActions />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -25,9 +25,7 @@ const App: React.FC = () => {
         <main>
           <CountdownTimer />
           <EventDetails />
-          <CalendarIntegration />
           <GuestBook />
-          <ShareSection />
         </main>
         <Footer />
       </motion.div>

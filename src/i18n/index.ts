@@ -4,7 +4,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from './locales/en.json';
 import ur from './locales/ur.json';
 import ta from './locales/ta.json';
-import ka from './locales/ka.json';
 
 i18n
   .use(LanguageDetector)
@@ -13,8 +12,7 @@ i18n
     resources: {
       en: { translation: en },
       ur: { translation: ur },
-      ta: { translation: ta },
-      ka: { translation: ka }
+      ta: { translation: ta }
     },
     fallbackLng: 'en',
     debug: true,

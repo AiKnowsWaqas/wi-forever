@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock } from 'lucide-react';
 import TimerUnit from './TimerUnit';
-import { weddingDate, getTimeElapsed, formatEventDate, formatEventTime } from '../utils/dateUtils';
+import { weddingDate, getTimeElapsed } from '../utils/dateUtils';
 import { useTranslation } from 'react-i18next';
 
 const CountdownTimer: React.FC = () => {
@@ -33,18 +32,8 @@ const CountdownTimer: React.FC = () => {
         className="max-w-4xl mx-auto text-center mb-10"
       >
         <h2 className="text-3xl md:text-4xl font-primary font-semibold mb-2 text-emerald">
-        {t('countdown.title')}
+          {t('countdown.title')}
         </h2>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-6">
-          <div className="flex items-center">
-            <Calendar className="w-5 h-5 mr-2 text-gold" />
-            <span className="text-lg">{formatEventDate(weddingDate)}</span>
-          </div>
-          <div className="flex items-center">
-            <Clock className="w-5 h-5 mr-2 text-gold" />
-            <span className="text-lg">{formatEventTime(weddingDate)}</span>
-          </div>
-        </div>
       </motion.div>
 
       <div className="mx-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 md:p-10 max-w-3xl border border-gold-light">
