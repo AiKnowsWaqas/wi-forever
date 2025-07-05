@@ -10,54 +10,6 @@ export const formatEventTime = (date: Date): string => {
   return format(date, 'h:mm a');
 };
 
-export const getTimeElapsed = (startDate: Date): { 
-  months: number;
-  days: number; 
-  hours: number; 
-  minutes: number; 
-  seconds: number 
-} => {
-  const now = new Date();
-  
-  if (now <= startDate) {
-    return { months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
-  }
-  
-  const duration = intervalToDuration({ start: startDate, end: now });
-  
-  return {
-    months: duration.months || 0,
-    days: duration.days || 0,
-    hours: duration.hours || 0,
-    minutes: duration.minutes || 0,
-    seconds: duration.seconds || 0,
-  };
-};
-
-export const getTimeRemaining = (targetDate: Date): { 
-  months: number;
-  days: number; 
-  hours: number; 
-  minutes: number; 
-  seconds: number 
-} => {
-  const now = new Date();
-  
-  if (now >= targetDate) {
-    return { months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
-  }
-  
-  const duration = intervalToDuration({ start: now, end: targetDate });
-  
-  return {
-    months: duration.months || 0,
-    days: duration.days || 0,
-    hours: duration.hours || 0,
-    minutes: duration.minutes || 0,
-    seconds: duration.seconds || 0,
-  };
-};
-
 export const getTimeRemainingText = (targetDate: Date): string => {
   const now = new Date();
   

@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './components/Header';
-import CountdownTimer from './components/CountdownTimer';
 import EventDetails from './components/EventDetails';
 import GuestBook from './components/GuestBook';
 import FloatingActions from './components/FloatingActions';
@@ -23,7 +22,6 @@ const App: React.FC = () => {
       >
         <Header />
         <main>
-          <CountdownTimer />
           <EventDetails />
           <GuestBook />
         </main>

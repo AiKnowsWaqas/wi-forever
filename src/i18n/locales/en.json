@@ -10,19 +10,6 @@
     "quranVerse": "And among His Signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are Signs for those who reflect.",
     "surah": "Surah Ar-Rum 30:21"
   },
-  "countdown": {
-    "title": "Join Us On Our Special Day",
-    "months": "Months",
-    "days": "Days",
-    "hours": "Hours",
-    "minutes": "Minutes",
-    "seconds": "Seconds",
-    "message": "We eagerly await celebrating this blessed occasion with you.",
-    "weddingDay": "Today is our Wedding Day!",
-    "marriedFor": "Married For...",
-    "blessingMessage": "Please keep us in your prayers",
-    "counter": "Our Forever Begins In..."
-  },
   "events": {
     "title": "Celebration Details",
     "subtitle": "We're delighted to invite you to join us for these special moments.",
@@ -40,13 +27,6 @@
     },
     "getDirections": "Get Directions"
   },
-  "calendar": {
-    "title": "Reserve Our Day",
-    "subtitle": "Mark this blessed occasion in your calendar.",
-    "google": "Google Calendar",
-    "outlook": "Outlook",
-    "apple": "Apple Calendar"
-  },
   "guestbook": {
     "title": "Message Board",
     "subtitle": "Share your blessings and well wishes with us.",
@@ -59,12 +39,6 @@
     "sending": "Sending...",
     "messages": "Messages",
     "noMessages": "No messages yet. Be the first to leave a blessing!"
-  },
-  "share": {
-    "title": "Extend Our Joy",
-    "subtitle": "Share this moment with loved ones.",
-    "via": "Share via",
-    "copied": "Link copied to clipboard!"
   },
   "footer": {
     "dua": "As we begin this sacred journey, we humbly seek your precious duas.",
