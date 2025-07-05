@@ -14,55 +14,49 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
   
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden border border-gold-light hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-lg shadow-md border border-gold-light hover:shadow-lg transition-all duration-300 overflow-hidden"
     >
-      {/* Header Section */}
-      <div className="bg-gradient-to-r from-emerald to-emerald-dark p-6 text-white">
-        <h3 className="text-2xl md:text-3xl font-primary font-semibold mb-2">
+      {/* Compact Header */}
+      <div className="bg-gradient-to-r from-emerald to-emerald-dark p-4 text-white">
+        <h3 className="text-lg md:text-xl font-primary font-semibold">
           {t(`events.${event.id}.title`)}
         </h3>
-        <div className="flex items-center text-emerald-light">
-          <Clock className="h-5 w-5 mr-2" />
-          <span className="font-medium">{t(`events.${event.id}.time`)}</span>
-        </div>
       </div>
 
-      {/* Content Section */}
-      <div className="p-6">
-        <div className="flex items-start mb-4">
-          <div className="mt-1 mr-3">
-            <MapPin className="h-5 w-5 text-gold" />
-          </div>
-          <div className="flex-1">
-            <p className="font-semibold text-lg text-gray-800 mb-1">
-              {t(`events.${event.id}.location`)}
-            </p>
-          </div>
+      {/* Content - More Compact */}
+      <div className="p-4 space-y-3">
+        {/* Time */}
+        <div className="flex items-center text-emerald">
+          <Clock className="h-4 w-4 mr-2 flex-shrink-0" />
+          <span className="font-medium text-sm">{t(`events.${event.id}.time`)}</span>
         </div>
         
-        <p className="text-gray-700 mb-6 leading-relaxed">
-          {t(`events.${event.id}.description`)}
-        </p>
+        {/* Location */}
+        <div className="flex items-center text-gray-700">
+          <MapPin className="h-4 w-4 mr-2 flex-shrink-0 text-gold" />
+          <span className="font-medium text-sm">{t(`events.${event.id}.location`)}</span>
+        </div>
         
+        {/* Directions Button */}
         <motion.a
           href={event.mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-4 py-2 bg-emerald text-white font-medium rounded-lg hover:bg-emerald-dark transition-colors duration-200"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center px-3 py-2 bg-emerald text-white text-sm font-medium rounded-md hover:bg-emerald-dark transition-colors duration-200"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
           {t('events.getDirections')}
-          <ExternalLink className="ml-2 h-4 w-4" />
+          <ExternalLink className="ml-1 h-3 w-3" />
         </motion.a>
       </div>
 
-      {/* Map Section */}
-      <div className="h-64 sm:h-80 border-t border-gray-100">
+      {/* Compact Map */}
+      <div className="h-48 border-t border-gray-100">
         <iframe
           src={event.embedMapUrl}
           width="100%"
@@ -72,7 +66,6 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title={`Map to ${t(`events.${event.id}.location`)}`}
-          className="rounded-b-xl"
         ></iframe>
       </div>
     </motion.div>

@@ -8,30 +8,23 @@ const EventDetails: React.FC = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="events" className="section bg-white/80 py-16 md:py-20">
+    <section id="events" className="section py-12 md:py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-8"
       >
-        <h2 className="text-3xl md:text-4xl font-primary font-semibold mb-4 text-emerald">
+        <h2 className="text-2xl md:text-3xl font-primary font-semibold mb-3 text-emerald">
           {t('events.title')}
         </h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-          {t('events.subtitle')}
-        </p>
         
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center mt-8 mb-4">
-          <div className="h-px w-16 bg-gold-light"></div>
-          <div className="w-3 h-3 bg-gold rounded-full mx-4"></div>
-          <div className="h-px w-16 bg-gold-light"></div>
-        </div>
+        {/* Simple decorative element */}
+        <div className="w-16 h-0.5 bg-gold mx-auto"></div>
       </motion.div>
       
-      <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-4 lg:gap-6 max-w-5xl mx-auto">
         {eventDetails.map((event, index) => (
           <EventCard key={event.id} event={event} index={index} />
         ))}
