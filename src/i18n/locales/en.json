@@ -5,8 +5,8 @@
     "ceremony": "Nikkah",
     "waqas": "Mohammed Waqas",
     "son": "Son of Janab Natamkar Saifullah",
-    "ifrah": "Ifra Mahin",
-    "daughter": "Daughter of Janab Savood",
+    "ifrah": "Bride",
+    "daughter": "Daughter of Janab Brides Father",
     "quranVerse": "And among His Signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts. Verily in that are Signs for those who reflect.",
     "surah": "Surah Ar-Rum 30:21"
   },
@@ -19,6 +19,7 @@
     "seconds": "Seconds",
     "message": "We eagerly await celebrating this blessed occasion with you.",
     "weddingDay": "Today is our Wedding Day!",
+    "marriedFor": "Married For...",
     "blessingMessage": "Please keep us in your prayers",
     "counter": "Our Forever Begins In..."
   },
@@ -46,6 +47,19 @@
     "outlook": "Outlook",
     "apple": "Apple Calendar"
   },
+  "guestbook": {
+    "title": "Message Board",
+    "subtitle": "Share your blessings and well wishes with us.",
+    "leaveMessage": "Leave a Message",
+    "yourName": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "yourMessage": "Your Message",
+    "messagePlaceholder": "Share your blessings and well wishes...",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "messages": "Messages",
+    "noMessages": "No messages yet. Be the first to leave a blessing!"
+  },
   "share": {
     "title": "Extend Our Joy",
     "subtitle": "Share this moment with loved ones.",
@@ -54,6 +68,6 @@
   },
   "footer": {
     "dua": "As we begin this sacred journey, we humbly seek your precious duas.",
-    "contact": "-  Waqas & Ifra "
+    "contact": "-  Waqas & Bride "
   }
 }

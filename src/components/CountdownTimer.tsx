@@ -2,23 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock } from 'lucide-react';
 import TimerUnit from './TimerUnit';
-import { weddingDate, getTimeRemaining, formatEventDate, formatEventTime } from '../utils/dateUtils';
+import { weddingDate, getTimeElapsed, formatEventDate, formatEventTime } from '../utils/dateUtils';
 import { useTranslation } from 'react-i18next';
 
 const CountdownTimer: React.FC = () => {
-  const [timeRemaining, setTimeRemaining] = useState(getTimeRemaining(weddingDate));
+  const [timeElapsed, setTimeElapsed] = useState(getTimeElapsed(weddingDate));
   const [isWeddingDay, setIsWeddingDay] = useState(false);
   const { t } = useTranslation();
   
   useEffect(() => {
     const timer = setInterval(() => {
-      const remaining = getTimeRemaining(weddingDate);
-      setTimeRemaining(remaining);
+      const elapsed = getTimeElapsed(weddingDate);
+      setTimeElapsed(elapsed);
       
-      if (remaining.months === 0 && remaining.days === 0 && remaining.hours === 0 && 
-          remaining.minutes === 0 && remaining.seconds === 0) {
+      const now = new Date();
+      if (now >= weddingDate) {
         setIsWeddingDay(true);
-        clearInterval(timer);
       }
     }, 1000);
     
@@ -51,18 +50,18 @@ const CountdownTimer: React.FC = () => {
       <div className="mx-auto bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 md:p-10 max-w-3xl border border-gold-light">
         <h3 className="text-2xl md:text-3xl text-center font-primary mb-8">
           {isWeddingDay ? (
-            <span className="text-emerald">{t('countdown.weddingDay')}</span>
+            <span className="text-emerald">{t('countdown.marriedFor')}</span>
           ) : (
             <span>{t('countdown.counter')}</span>
           )}
         </h3>
         
         <div className="flex justify-center space-x-4 md:space-x-8 mb-8">
-          <TimerUnit value={timeRemaining.months} label="Months" delay={0.1} />
-          <TimerUnit value={timeRemaining.days} label="Days" delay={0.2} />
-          <TimerUnit value={timeRemaining.hours} label="Hours" delay={0.3} />
-          <TimerUnit value={timeRemaining.minutes} label="Minutes" delay={0.4} />
-          <TimerUnit value={timeRemaining.seconds} label="Seconds" delay={0.5} />
+          <TimerUnit value={timeElapsed.months} label="Months" delay={0.1} />
+          <TimerUnit value={timeElapsed.days} label="Days" delay={0.2} />
+          <TimerUnit value={timeElapsed.hours} label="Hours" delay={0.3} />
+          <TimerUnit value={timeElapsed.minutes} label="Minutes" delay={0.4} />
+          <TimerUnit value={timeElapsed.seconds} label="Seconds" delay={0.5} />
         </div>
         
         <motion.div 

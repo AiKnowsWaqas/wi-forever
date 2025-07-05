@@ -3,6 +3,7 @@ import Header from './components/Header';
 import CountdownTimer from './components/CountdownTimer';
 import EventDetails from './components/EventDetails';
 import CalendarIntegration from './components/CalendarIntegration';
+import GuestBook from './components/GuestBook';
 import ShareSection from './components/ShareSection';
 import Footer from './components/Footer';
 import LanguageSelector from './components/LanguageSelector';
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <CountdownTimer />
           <EventDetails />
           <CalendarIntegration />
+          <GuestBook />
           <ShareSection />
         </main>
         <Footer />
